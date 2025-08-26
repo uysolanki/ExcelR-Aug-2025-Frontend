@@ -1,0 +1,18 @@
+ #subscribe-button{
+            background-color: #FF9900;
+            font-size: 24px;
+            color:white;
+            border: 5px dashed red;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 20px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Arial';
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+
+        #subscribe-button:hover{
+            opacity: 0.8;
+        }
