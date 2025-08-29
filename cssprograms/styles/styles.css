@@ -1,0 +1,40 @@
+.logo{
+}
+.logo img{
+    height: 64px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(241, 205, 205);
+}
+.right ul{
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    font-size: 20px
+    ;
+}
+.right ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.right ul li img{
+    height: 12px;
+    padding: 2px;
+}
+.right ul li a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.image{
+    height: 200px;
+    width: 300px;
+}
