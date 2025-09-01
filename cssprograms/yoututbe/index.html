@@ -4,15 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .channel-picture{
+            display: inline-block;
+        }
+        .video-details{
+             display: inline-block;
+             margin-left: 5px;
+        }
+        .thumbnail-image{
+            width: 300px;
+        }
+
+        .video-info-row{
+            width: 300px;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .channel-image{
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        #video-title{
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        #author{
+            font-size: 8px;
+            margin-bottom: 4px;
+        }
+        #views{
+            font-size: 8px;
+        }
+
+        .video-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="video-card">
+    <div class="video-grid">
+        <div class="video-card">
             <div class="thumbnail-row">
-                    <img src="../../images/thumbnail-1.webp" />
+                    <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
             </div>
             <div class="video-info-row">
+                    <div class="channel-picture">
+                        <img class="channel-image" src="../../images/channel-1.jpeg" />   
+                    </div>
+                    <div class="video-details">
+                        <p id="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        <p id="author">Umar Solanki &check;</p>
+                        <p id="views">3.4 M Views &bull; 6 Months Ago</p>
+                    </div>
 
             </div>
+        </div>
+
+        <div class="video-card">
+            <div class="thumbnail-row">
+                    <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+            </div>
+            <div class="video-info-row">
+                    <div class="channel-picture">
+                        <img class="channel-image" src="../../images/channel-1.jpeg" />   
+                    </div>
+                    <div class="video-details">
+                        <p id="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        <p id="author">Umar Solanki &check;</p>
+                        <p id="views">3.4 M Views &bull; 6 Months Ago</p>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="thumbnail-row">
+                    <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+            </div>
+            <div class="video-info-row">
+                    <div class="channel-picture">
+                        <img class="channel-image" src="../../images/channel-1.jpeg" />   
+                    </div>
+                    <div class="video-details">
+                        <p id="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        <p id="author">Umar Solanki &check;</p>
+                        <p id="views">3.4 M Views &bull; 6 Months Ago</p>
+                    </div>
+
+            </div>
+        </div>
+
+
+        <div class="video-card">
+            <div class="thumbnail-row">
+                    <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+            </div>
+            <div class="video-info-row">
+                    <div class="channel-picture">
+                        <img class="channel-image" src="../../images/channel-1.jpeg" />   
+                    </div>
+                    <div class="video-details">
+                        <p id="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        <p id="author">Umar Solanki &check;</p>
+                        <p id="views">3.4 M Views &bull; 6 Months Ago</p>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="thumbnail-row">
+                    <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+            </div>
+            <div class="video-info-row">
+                    <div class="channel-picture">
+                        <img class="channel-image" src="../../images/channel-1.jpeg" />   
+                    </div>
+                    <div class="video-details">
+                        <p id="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        <p id="author">Umar Solanki &check;</p>
+                        <p id="views">3.4 M Views &bull; 6 Months Ago</p>
+                    </div>
+
+            </div>
+        </div>
 
     </div>
 </body>
