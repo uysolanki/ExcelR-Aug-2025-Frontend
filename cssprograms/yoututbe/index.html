@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+        body{
+            height:10000px;
+        }
         *{
             margin: 0px;
             padding: 0px;
@@ -20,7 +23,7 @@
              margin-left: 5px;
         }
         .thumbnail-image{
-            width: 300px;
+            width: 100%;
         }
 
         .video-info-row{
@@ -52,14 +55,87 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             column-gap: 10px;
             row-gap: 10px;
+            margin-left: 100px; 
+            margin-top: 90px;
+        }
+        .thumbnail-row{
+            position: relative;
+        }
+        .video-time{
+            background-color: black;
+            color:white;
+            position: absolute;
+            bottom:10px;
+            right: 10px;
+        }
+        .sidebar{
+            height: 800px;
+            width : 100px;
+            background-color: white;
+            position: fixed;
+            z-index: 91;
+            top:90px;
+        }
+        .header{
+            height: 90px;
+            background-color: lightpink;
+            position: fixed;
+            z-index: 92;
+            top : 0px;
+            left : 0px;
+            right : 0px
+        }
+        .sidebar-link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-link:hover{
+            background-color: gray;
+        }
+        .sidebar-link img{
+            height: 40px;
         }
     </style>
 </head>
 <body>
+    <div class="sidebar">
+      <div class="sidebar-link">
+        <img src="../../images/home.svg" />
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="../../images/explore.svg" />
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="../../images/subscriptions.svg" />
+        <div>Subscriptions</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="../../images/originals.svg" />
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="../../images/youtube-music.svg" />
+        <div>Youtube Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="../../images/library.svg" />
+        <div>Library</div>
+      </div>
+    </div>
+
+     <div class="header">
+
+    </div>
     <div class="video-grid">
         <div class="video-card">
             <div class="thumbnail-row">
                     <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+                    <p class="video-time">14:20</p>
             </div>
             <div class="video-info-row">
                     <div class="channel-picture">
@@ -77,6 +153,7 @@
         <div class="video-card">
             <div class="thumbnail-row">
                     <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+                    <p class="video-time">54:20</p>
             </div>
             <div class="video-info-row">
                     <div class="channel-picture">
@@ -94,6 +171,7 @@
         <div class="video-card">
             <div class="thumbnail-row">
                     <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+                    <p class="video-time">45:20</p>
             </div>
             <div class="video-info-row">
                     <div class="channel-picture">
@@ -112,6 +190,7 @@
         <div class="video-card">
             <div class="thumbnail-row">
                     <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+                    <p class="video-time">14:20</p>
             </div>
             <div class="video-info-row">
                     <div class="channel-picture">
@@ -129,6 +208,7 @@
         <div class="video-card">
             <div class="thumbnail-row">
                     <img class="thumbnail-image" src="../../images/thumbnail-1.webp" />
+                    <p class="video-time">41:20</p>
             </div>
             <div class="video-info-row">
                     <div class="channel-picture">
