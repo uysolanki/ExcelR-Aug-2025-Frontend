@@ -98,6 +98,25 @@
         .sidebar-link img{
             height: 40px;
         }
+
+        @media (max-width: 750px) {      			/* if the max width of screen in 750px */
+    .video-grid {					/* if the width of screen between 0px to 750 px */
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 751px) and (max-width: 999px) {  	/* if the width of screen between 750px to 1000 px*/
+    .video-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1000px) {			/* if the width of screen more than 1000 px */
+    .video-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
     </style>
 </head>
 <body>
@@ -130,6 +149,20 @@
 
      <div class="header">
 
+            <div class="left-section">
+                    <!-- <img class="img-hamburger" src="../../images/hamburger-menu.svg">
+                    <img class="img-youtubeicon" src="../../images/youtube-logo.svg">      -->
+            </div>
+
+            <div class="mid-section">
+                   
+            </div>
+
+            <div class="right-section">
+                  
+            </div>
+
+            
     </div>
     <div class="video-grid">
         <div class="video-card">
