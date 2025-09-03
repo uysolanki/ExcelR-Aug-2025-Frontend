@@ -1,0 +1,88 @@
+cars=["Audi","BMW","Merc","Honda","Maruti","Mahindra"]
+        console.log(cars)
+        console.log(cars.length)  //will display size of array
+        cars.push("Hyundai") //will add at the last
+        console.log(cars)//["Audi","BMW","Merc","Honda","Maruti","Mahindra","Hyundai"]
+        cars.unshift("Tata") //will add at first position
+        console.log(cars)//["Tata","Audi","BMW","Merc","Honda","Maruti","Mahindra","Hyundai"]
+        cars.pop() //remove last
+        console.log(cars)//["Tata","Audi","BMW","Merc","Honda","Maruti","Mahindra"]
+        cars.shift()//remove first
+        console.log(cars)//["Audi","BMW","Merc","Honda","Maruti","Mahindra"]
+
+        console.log(cars.at(2)) //Merc
+        console.log(cars[2]) //Merc
+
+        console.log(cars.includes("Volvo")) //False
+        console.log(cars.includes("Honda")) //True
+        console.log(cars.indexOf("Honda")) //3
+
+        console.log(cars.every(
+            (car)=>car.length>=3
+        ))                                 //true
+
+        console.log(cars.some(
+            (car)=>car.length>=7
+        ))                                  //true
+
+        // cars.fill("Nano")
+        // console.log(cars)
+
+        bikes=["Hayabusa","Kawasaki Ninja"]
+        cars=cars.concat(bikes)
+        console.log(cars)
+
+        console.log(cars.reverse())
+        console.log(cars.sort())
+
+        
+        let carString=cars.join(',')
+        console.log(carString) //"Audi,BMW,Merc,Honda,Maruti,Mahindra"
+
+        let array2d=[1,2,3,[4,5,6]]
+        console.log(array2d)
+        let flatArray=array2d.flat()
+        console.log( flatArray)
+
+        let carStringNew=cars.toString();
+        console.log(carStringNew)
+
+        console.log(cars)
+        let slicedArray=cars.slice(2,5)
+        console.log(slicedArray)
+        console.log(cars)
+
+        let splicedArray=cars.splice(2,5)
+        console.log(splicedArray)
+        console.log(cars)
+
+        console.log(Array.isArray(cars))
+        let a=10;
+        console.log(Array.isArray(a))
+
+        let fruit="Apple"
+        let fruitArray=Array.from(fruit)                    //['A','p','p','l','e']
+        console.log(fruitArray)
+		
+		//--- Arrays are ref type---------
+
+      const array1 = [1, 2, 3];
+	  const array2 = array1;         //ref of array1 is alloted to array2 - shallow copy
+	  array2.push(4);
+	  console.log(array1);
+      console.log(array2);			//will show same result
+	  
+	  //to do a deep copy
+	  
+      const array2 = array1.slice();
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);				//4 will only be added to array 2
+	  
+	  
+	  //---Array destructuring
+
+      const [firstValue, secondValue] = [1, 2, 3];
+	  console.log(firstValue);  //1
+      console.log(secondValue); //2
+	  

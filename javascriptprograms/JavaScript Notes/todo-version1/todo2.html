@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .input-error-message{
+            color:red;
+        }
+        .todo-item{
+            display: inline-block;
+        }
+    </style>
+  </head>
+  <body>
+    <h3>Todo List Practice 2</h3>
+    <input type="text" placeholder="Todo name" class="js-input-text" /><br>
+    <span class="input-error-message js-input-error-message"></span><br>
+    <button class="js-add-button">Add</button>
+    <div class="js-show-todo-list"></div>
+
+    <script>
+      let todoListArray = ['Watch Video','Practice Programming','give car for servicing', 'pickup groceries'];
+      
+      function renderTodoList()
+      {
+    //  let todoListHtml='';
+    //   todoListArray.forEach(
+    //       (singleTodoListElement,index)=>{
+    //          todoListHtml+= `<p class="todo-item">${singleTodoListElement}</p><button class="js-delete-todo-item">Delete</button><br>`
+    //       }
+    //   );
+
+    let todoListHtml=todoListArray.map(
+        (singleTodoListElement,index)=>{
+            return `<div>
+                <p class="todo-item">${singleTodoListElement}</p>
+                <button class="js-delete-todo-item">Delete</button>
+                </div>`
+        } 
+      ).join('')
+
+
+	//The map function returns an array, and when you insert this array into the DOM, JavaScript automatically 
+	//converts it into a string with commas between the elements
+	
+	//you can join the array of strings into a single string without commas by using join('')
+
+      const todoListElement=document.querySelector('.js-show-todo-list')
+      todoListElement.innerHTML=todoListHtml;
+        
+      const todoDeleteButtons=document.querySelectorAll('.js-delete-todo-item');
+      todoDeleteButtons.forEach(
+        (todoDeleteButton,index)=>{
+          todoDeleteButton.addEventListener('click',()=>{
+            todoListArray.splice(`${index}`,1);
+            console.log(todoListArray);
+            //console.log("Hello")
+            renderTodoList();
+          });  
+          
+        });
+
+      }
+
+      renderTodoList();
+
+
+
+      const addButton = document.querySelector(".js-add-button");
+      addButton.addEventListener("click", addToTodoList);
+
+      const userInputTextbox = document.querySelector(".js-input-text");
+      userInputTextbox.addEventListener("keydown", () => {
+        if (event.key === "Enter") {
+          addToTodoList();
+        }
+      });
+      
+
+      function addToTodoList() {
+        let InputErrorMessage=document.querySelector('.js-input-error-message');
+        const userInputValue = userInputTextbox.value;
+        if (userInputValue === "") {
+            //alert("textbox cannot be blank");
+            InputErrorMessage.innerText="textbox cannot be blank";
+            userInputTextbox.style.outline="3px solid red";
+
+        }
+        else  if (todoListArray.includes(userInputValue)) {
+          //alert("duplicate elements not allowed");
+          InputErrorMessage.innerText="duplicate elements not allowed";
+          userInputTextbox.style.outline="3px solid red";
+        }
+        else {
+            todoListArray.push(userInputValue);
+            userInputTextbox.style.outline="none";
+            InputErrorMessage.innerText="";
+        }
+
+        console.log(todoListArray);
+        userInputTextbox.value = "";
+        userInputTextbox.focus();
+        renderTodoList();
+      }
+
+
+
+      
+      
+        renderTodoList();
+
+      // addButton.addEventListener('click',()=>{
+      //     const userInputTextbox=document.querySelector('.js-input-text');
+      //     const userInputValue=userInputTextbox.value;
+      //     console.log(userInputValue);
+      //     todoListArray.push(userInputValue);
+      //     console.log(todoListArray);
+      //     userInputTextbox.value='';
+      //     userInputTextbox.focus();
+      // });
+    </script>
+  </body>
+</html>
