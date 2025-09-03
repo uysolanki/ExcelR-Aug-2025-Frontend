@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function areaRectS1()
+        {
+           let len=10;
+           let br=20;
+           
+           let area=len*br;
+           console.log('Area of Rectangle is ',area)
+           console.log(`Area of Rectangle is ${area}`)
+        }
+
+        function demo()
+        {
+            age=18
+            height=5.9
+            name="Virat"
+
+        console.log("My name is ",name, "I am ", age, " years old, my height is ",height, " feets" )
+        console.log(`My name is ${name} I am ${age} years old, my height is ${height} feets`)
+     
+        }
+        areaRectS1()
+        demo()
+
+
+        function areaRectS2()
+        {
+           let len=parseInt(prompt("Please enter length of Rectangle"))
+           let br=parseInt(prompt("Please enter breadth of Rectangle"))
+           
+           let area=len*br;
+           return area
+        }
+
+        let ans=areaRectS2()
+        console.log(`Area of Rectangle is ${ans}`)
+    </script>
+</body>
+</html>
