@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+    //    function sum1(s1,s2)
+    //    {
+    //     let total=s1+s2;
+    //     let per=total/2;
+    //     console.log(`Total Marks is ${total}`)
+    //     console.log(`Percentage is ${per}`)
+    //    }
+
+    //    function sum2(s1,s2,s3)
+    //    {
+    //     let total=s1+s2+s3;
+    //     let per=total/3;
+    //     console.log(`Total Marks is ${total}`)
+    //     console.log(`Percentage is ${per}`)
+    //    }
+
+       function sum()
+       {
+            console.log(arguments.length)
+            let total=0
+            for(let i=0;i<arguments.length;i++)
+            {
+                total=total+parseInt(arguments[i]);
+            }
+            let per=total/arguments.length;
+            console.log(`Total Marks is ${total}`)
+            console.log(`Percentage is ${per}`)
+       }
+
+    //    sum1(70,80)
+    //    sum2(70,80,90)
+
+       sum(10,20)
+       sum(10,20,30)
+       sum(10,20,30,40)
+       sum(10,20,30,40,50)
+    </script>
+</body>
+</html>
+
