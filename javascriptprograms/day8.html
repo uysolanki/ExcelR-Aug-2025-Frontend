@@ -30,6 +30,31 @@
        // setTimeout(greet,5000)
         setInterval(greet,2000)
 
+
+
+        function checkPrime(number,callback)
+        {
+            let counter=0;
+            for(let i=1;i<=number;i++)
+            {
+                    if(number%i==0)
+                    counter++;
+            }
+
+            callback(counter)
+        }
+
+        function displayPrime(value)
+        {
+            if(value==2)
+            console.log('Number is Prime')
+            else
+            console.log('Number is NOT prime')
+        }
+
+
+        checkPrime(8,displayPrime)
+
     </script>
 </body>
 </html>
