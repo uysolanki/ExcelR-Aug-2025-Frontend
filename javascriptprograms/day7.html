@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a=10;
+        let b="Alice"
+        let c=10.5
+        let d=true
+        let e=["audi","BMW","Merc"];
+
+       function sum()
+       {
+            console.log(arguments.length)
+            let total=0
+            for(let i=0;i<arguments.length;i++)
+            {
+                total=total+parseInt(arguments[i]);
+            }
+            let per=total/arguments.length;
+            console.log(`Total Marks is ${total}`)
+            console.log(`Percentage is ${per}`)
+       }
+
+        // console.log(typeof(a))  //number
+        // console.log(typeof(b))  //string
+        // console.log(typeof(c))  //number
+        // console.log(typeof(d))  //boolean
+        // console.log(typeof(e))  //object
+        // console.log(typeof(sum))   //function
+        // console.log(typeof(null))
+        // console.log(typeof(undefined))
+
+
+        function test(value1,value2)
+        {
+            console.log(typeof(value1))
+            console.log(typeof(value2))
+        }
+
+        function demo()
+        {
+            console.log("hi")
+        }
+
+        // test(10)
+        // test("Apple")
+        test(10,demo)
+    </script>
+</body>
+</html>
