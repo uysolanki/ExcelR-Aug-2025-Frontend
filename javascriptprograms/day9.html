@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+function prime()
+{
+
+    let number=parseInt(prompt('please enter a number'))
+
+    let counter=0;
+    for(let i=1;i<=number;i++)
+{
+    if(number%i==0)
+    counter++
+}
+
+if(counter==2)
+console.log('Prime')
+else
+console.log('Not Prime')
+}
+
+setInterval(prime,5000)
+</script> 
+</body>
+</html>

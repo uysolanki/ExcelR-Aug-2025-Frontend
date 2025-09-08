@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        function greet()
+        {
+            console.log('Welcome Virat')
+        }
+
+
+        greet();
+
+
+    //    let g= function greet()
+    //     {
+    //         console.log('Welcome Rohit')
+    //     }
+
+
+    //     g();
+
+
+    //arrow function demo
+     let k=  ()=>
+        {
+            console.log('Welcome Hardik')
+        }
+
+
+        k();
+
+    
+    //arrow function body is of single line
+
+
+    let m=()=> console.log('Welcome Shubman')
+    m();
+
+    //parameter passing to arrow function
+
+    let p=(playerName)=> console.log(`Welcome ${playerName}`)
+    p('Jasprit');
+
+
+    // single line ()=>()
+    // multiline ()={ return}
+
+
+
+    let pr=()=>
+    {
+        let number=parseInt(prompt('please enter a number'))
+
+        let counter=0;
+        for(let i=1;i<=number;i++)
+        {
+        if(number%i==0)
+        counter++
+        }
+    if(counter==2)
+    console.log('Prime')
+    else
+    console.log('Not Prime')
+    }
+
+    pr();
+
+
+    let a=(num)=>(num*num)
+    let sq=a(5);
+    console.log(sq)
+
+    //()=>()   when the body of my arrow function is single line RHS () optional, return kw is implicilty present
+    //()=>{}   when the body of my arrow function is multiple line, {} compulsory, return kw has to be added explicitly
+    
+
+    function square(number)
+    {
+        return number*number;
+    }
+    
+    let d=square(7)
+    console.log(d)
+
+
+    //let sqr=(number)=> { return (number*number)};
+    let sqr=(number)=> (number*number);
+    
+    let d1=sqr(11)
+    console.log(d1)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./rps5.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button class="move-button js-rock-button"><img src="../day3/images/rock-emoji.png" class="move-icon"></button>
+    <button class="move-button js-paper-button"><img src="../day3/images/paper-emoji.png" class="move-icon"></button>
+    <button class="move-button js-scissors-button"><img src="../day3/images/scissors-emoji.png" class="move-icon"></button>
+
+    <p class="js-moves moves"> </p>     <!-- You - Rock  Computer - Rock -->
+    <p class="js-result result"></p>    <!-- Tie -->
+    <p class="js-score score"></p>      <!-- Score -->
+    
+    <button
+    onclick="
+  score.wins=0;
+  score.loss=0;
+  score.tie=0;
+  displayScore();
+  localStorage.removeItem('score'); " class="reset-score-button">
+    Reset Score
+  </button>
+    
+  <button class="autoplay-button" onclick="autoplaymode();">Autoplay</button> <span class="js-autoplay-status-text autoplay-status-text">AUTOPLAY MODE OFF</span>
+    <script src="./rps5.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: arial;
+  padding-left: 30px;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.move-icon {
+  height: 50px;
+}
+.move-button {
+  height: 100px;
+  width: 100px;
+  border: 3px solid white;
+  background-color: transparent;
+  border-radius: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.result {
+  font-size: 25px;
+  font-weight: bold;
+}
+.reset-score-button,
+.autoplay-button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  height: 36px;
+  width: 105px;
+}
+
+.autoplay-status-text{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: red;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  margin-left: 10px;
+  height: 36px;
+  width: 105px;
+}
+
+.autoplay-status-text-on{
+    background-color: green;
+  }

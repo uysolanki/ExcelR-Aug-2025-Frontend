@@ -1,0 +1,43 @@
+.thumbnail-image{
+    object-fit: cover;
+    width: 100%;
+}
+.thumbnail-row{
+    position: relative;
+}
+
+.timing{
+    background-color: black;
+    color: white;
+    height: 24px;
+    width:42px;
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.video-metadata-row{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channel-image{
+    object-fit: cover;
+    width: 50px;
+    vertical-align: top;
+    border-radius: 25px;
+}
+
+
+
+.video-card{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* column-gap: 20px;
+    row-gap: 20px; */
+}
