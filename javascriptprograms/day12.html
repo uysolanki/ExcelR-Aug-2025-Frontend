@@ -9,12 +9,45 @@
     <script>
 
         let player={
-                jno : 'Virat',
+                jno : 18,
+                pname : 'Virat',
                 mp  : 100,
                 rs  :10000,
+                mom : 100,
+                'mom-name':'Saroj',
+
+                avg: function calculateAvg()
+                     {
+                        let ans=this.rs/this.mp
+                        console.log(ans)
+                     }
             }
 
+            console.log(typeof(player.avg()))
+            console.log(typeof(player.jno));
+             console.log(typeof(player.rs));
+              console.log(typeof(player.avg));
+
+        let name=99
+        console.log(player.jno)
+        console.log(player.pname)
+        console.log(player.mom-name)
+
+        console.log(player['mom-name'])
         console.log(player)
+
+        console.log(`My name is ${player.pname}`)
+
+        player.strike=120
+        
+        console.log(player)
+
+        
+        console.log(player)
+
+        len=10
+        console.log(len*br)
+
     </script>
 </body>
 </html>
