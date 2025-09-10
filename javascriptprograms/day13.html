@@ -29,6 +29,51 @@
      cars.shift()
      console.log(cars)
 
+     //return value at given index
+     let car=cars.at(1)
+     console.log(car)
+
+     let car1=cars[1]
+     console.log(car1)
+
+     //return index at given value
+     let i=cars.indexOf('Honda')
+     console.log(i)
+
+     if(cars.includes('Audi'))
+     {
+        console.log('Car Found')
+     }
+     else
+     {
+        console.log('Car Not Found')
+     }
+
+    //return true if the condition mentioned in arrow function is satisfied by ALL elements of the array
+     let everyDemo=cars.every(
+        (car)=>(car.length>=5)
+     )
+     console.log(`Every Demo ${everyDemo}`)
+
+     //return true if the condition mentioned in arrow function is satisfied by atleast 1 element of the array
+     let someDemo=cars.some(
+        (car)=>(car.length>=5)
+     )
+     console.log(`Some Demo ${someDemo}`)
+
+     //fills the array with default values
+     cars.fill('spinny')
+
+     //to merge 2 arrays - concat
+
+     fruits=["Apple","Mango","Banana"]
+     console.log(fruits)
+     vegs=["Potato","Tomato"]
+     console.log(vegs)
+
+     let foods=fruits.concat(vegs)
+     console.log(foods)
+     
     </script>
 </body>
 </html>
