@@ -92,6 +92,16 @@
     console.log(arr[3]) //Banana
     let flatArr=arr.flat()
     console.log(flatArr)
+
+            //      0     1     2      3       4     5
+    const cars1=["Audi","BMW","Merc","Honda","Tata","BWD"]
+    let slicedCars=cars1.slice(1,4);
+    console.log(slicedCars) //BMW Merc Honda
+    console.log(cars1) // "Audi","BMW","Merc","Honda","Tata","BWD"
+
+    let splicedCars=cars1.splice(3,2);
+    console.log(splicedCars) ; //Honda Tata
+    console.log(cars1) // "Audi","BMW","Merc","BWD"
     </script>
 </body>
 </html>
