@@ -12,6 +12,17 @@
             pname:'Virat',
             mp:100
         }
+
+        //object destructuring
+        let{jno,pname,mp}=p1;
+
+         let{jno:jn,pname:pn,mp:ma}=p1;
+         console.log('My Jersey no is ',jn)
+         console.log('My Name is ',pn)
+         console.log('My Mat Played is ',ma)
+
+        console.log('My Jersey no is ',jno)
+
         console.log(p1)  //18 Virat 100
         p1.jno=81
         console.log(p1)  //81 Virat 100
@@ -59,8 +70,19 @@
             console.log(teamIndia.at(i).pname)
             totMatch+=teamIndia.at(i).mp
         }
-
         console.log(totMatch)
+
+        let jerseyNo=180
+        let playerName="Virat Premnath Kohli"
+        let matchesPlayed=1000
+
+        let vk={jerseyNo,playerName,matchesPlayed}
+
+
+        console.log(vk)
+      
+       
+
     </script>
 </body>
 </html>
