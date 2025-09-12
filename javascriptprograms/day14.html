@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1={
+            jno:18,
+            pname:'Virat',
+            mp:100
+        }
+        console.log(p1)  //18 Virat 100
+        p1.jno=81
+        console.log(p1)  //81 Virat 100
+        
+        const p2={
+            jno:45,
+            pname:'Rohit',
+            mp:200
+        }
+        console.log(p2)  //45 Rohit 200
+        p2.jno=54
+        console.log(p2)  //54 Rohit 200
+        //p2="Alice"
+        p3={
+            jno:33,
+            pname:'Hardik',
+            mp:50
+        }
+
+        let totalMatches=p1.mp + p2.mp + p3.mp;
+        console.log(totalMatches)
+
+
+        let teamIndia=[
+            {
+            jno:18,
+            pname:'Virat',
+            mp:100
+        },
+        {
+            jno:45,
+            pname:'Rohit',
+            mp:200
+        },
+        {
+            jno:33,
+            pname:'Hardik',
+            mp:50
+        }
+        ]
+
+        let totMatch=0
+        for(let i=0;i<teamIndia.length;i++)
+        {
+            console.log(teamIndia.at(i).pname)
+            totMatch+=teamIndia.at(i).mp
+        }
+
+        console.log(totMatch)
+    </script>
+</body>
+</html>
