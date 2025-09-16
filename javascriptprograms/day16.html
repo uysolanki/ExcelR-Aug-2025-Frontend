@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers=[10,11,12,13,14];
+
+        //store the double values in an array
+        let doubledArray=[]
+
+        for(let number of numbers)
+        {
+                let double=number*2;
+                doubledArray.push(double)
+        }
+
+        console.log(doubledArray)
+
+        let farr=numbers.map(
+            (num)=>num*2
+        ).map(
+            (num)=>(num-5)
+        )
+
+       let dArray=numbers.map(
+            (num)=>(num*2)
+        )
+
+       let finalArray= dArray.map(
+            (num)=>(num-5)
+        )
+
+        console.log(finalArray)
+        console.log(farr)
+    </script>
+</body>
+</html>
