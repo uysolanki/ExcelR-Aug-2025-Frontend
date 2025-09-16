@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+    let arr=["Audi","BMW","Merc","Honda"]
+      console.log(arr)
+    //1. push()  add at last postion
+      arr.push("Toyota") 
+      console.log(arr)
+    
+    //2. unshift()  add as last postion
+      arr.unshift("BYD")
+      console.log(arr)
+
+    //3. pop()  remove from last postion
+      arr.pop() 
+      console.log(arr)
+
+    //4. shift()  remove from first postion
+      arr.shift() 
+      console.log(arr)
+     
+    //5. length returns the size of the array
+    console.log(arr.length)
+
+    //6. get value from a particular Index
+    console.log(arr.at(2))
+
+    //7. includes to search for a value in Array
+    console.log(arr.includes("BMW"))
+
+    //8. reverse
+    console.log(arr.reverse())
+    //9. sort
+    console.log(arr.sort())
+       //       0        1       2       3         4          5        6
+    let names=["Umer", "Maaz", "Hamza","Affan","Musaib", "Khubeb", "Meezan", "Alishan"]
+    //10. slice copy paste
+    // slice (starting index,  ending index(give 1 extra))
+    //slice copy paste - og array will be uneffected
+    let systuds=names.slice(1,4)
+   
+    console.log(systuds)
+    console.log(names)
+
+    //11. splice cut paste
+    //splice(starting index, qunatity)
+
+    let tystuds=names.splice(1,1)
+    console.log(tystuds)
+    console.log(names)
+    </script>
+    
+
+</body>
+</html>

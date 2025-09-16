@@ -251,18 +251,41 @@
   }
 ]
 
+
+//Map
+let allTitles=products.map(
+  (product)=>product.title
+)
+
+console.log(allTitles)
 console.log(products.length)
 //traditional / classical for loop
-// for(let i=0;i<products.length;i++)
-// {
-//     console.log(products.at(i).title)
-// }
+for(let i=0;i<products.length;i++)
+{
+    console.log(products.at(i).title)
+}
 
 //for of loop (forEach loop)
+let max=0
+let maxProduct
 for(let product of products)
 {
-   console.log(product.title)
+   if(product.price>max)
+   {
+   maxProduct= product
+   max= product.price
+   }
 }
-    </script>
+
+console.log(maxProduct.title)
+
+
+let cars=["Audi","BMW", "Merc"]
+
+for(let car of cars)
+{
+  console.log("I drive " ,car)
+}
+</script>
 </body>
 </html>
