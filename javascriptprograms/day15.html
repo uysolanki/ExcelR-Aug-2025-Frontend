@@ -293,11 +293,12 @@ let allImages=products.map(
 
 console.log(allImages)
 
+
 allImages.forEach(
   (myImage)=>(console.log(myImage))
 )
 
-
+//display the length of all product title
 products.map(
   (prod)=>(prod.title)
 ).map(
@@ -312,6 +313,12 @@ let productsGreaterThan500= products.filter(
 ).forEach(
   (prod)=>(console.log(prod.title))
 )
+
+let totalProductPrice=products.reduce(
+  (acc,prod)=>(acc+prod.price),0
+)
+
+console.log(totalProductPrice)
 </script>
 </body>
 </html>

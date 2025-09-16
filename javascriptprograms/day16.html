@@ -39,11 +39,23 @@
 
 
         let numbers1=[10,11,12,13,14]
-        let oddNumbers=numbers.filter(
+        let oddNumbers=numbers1.filter(
             (num)=>(num%2==1)
         )
 
         console.log(oddNumbers)
+
+        let firstOddNumber=numbers1.find(
+            (num)=>(num%2==1)
+        )
+
+        console.log(firstOddNumber)
+
+        let sum=numbers1.reduce(
+        (acc,num)=>(acc+num)
+        )
+
+        console.log(sum)
     </script>
 </body>
 </html>
