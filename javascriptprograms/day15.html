@@ -296,6 +296,22 @@ console.log(allImages)
 allImages.forEach(
   (myImage)=>(console.log(myImage))
 )
+
+
+products.map(
+  (prod)=>(prod.title)
+).map(
+  (prod)=>(prod.length)
+).forEach(
+  (prod)=>(console.log(prod))
+)
+
+//display title of products where price > = 500
+let productsGreaterThan500= products.filter(
+  (prod)=>(prod.price>=500)
+).forEach(
+  (prod)=>(console.log(prod.title))
+)
 </script>
 </body>
 </html>
