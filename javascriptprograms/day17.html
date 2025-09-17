@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //rest operator
+
+        let numbers=[10,20,30,40,50];
+
+        let cars=["Audi","BMW","Merc","Tata","Mahindra"]
+        let [a,b,...arr]=numbers
+        let [car1,...otherCars]=cars;
+        console.log(a)
+        console.log(arr)
+
+        console.log(car1)
+        console.log(otherCars)
+
+        //spread operator
+        
+        let odd=[1,3,5]   //  1    3    5
+        let even=[2,4,6]  //  2    4    6
+
+        let allNumbers=odd.concat(even)
+        console.log(allNumbers)
+
+        let allNumbers1=[...odd,...even,0]
+        console.log(allNumbers1)
+
+    </script>
+</body>
+</html>
