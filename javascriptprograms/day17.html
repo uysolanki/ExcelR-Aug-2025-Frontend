@@ -31,6 +31,27 @@
         let allNumbers1=[...odd,...even,0]
         console.log(allNumbers1)
 
+        player={
+
+            pname:"Virat",
+            momname:'Saroj',
+            dadname:'Premnath',
+
+            jno:18,
+            mp:100,
+            rs:10000,
+            centuries:81,
+            strikerate:90,
+            average:55
+        }
+
+
+        let {pname,momname,dadname,...cricket}=player;
+        console.log(cricket)
+
+        player1={...player,trophy:3}
+        console.log(player1)
+
     </script>
 </body>
 </html>
