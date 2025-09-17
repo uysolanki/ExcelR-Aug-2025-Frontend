@@ -58,6 +58,22 @@
 
               }
           
+
+              //short circuit
+            //&& will return first falsy value
+            //|| will return first truthy value
+                     //T    F
+             let cs1= [] && 1
+             console.log(cs1)   //answer 0
+
+             let cs2= [] || 0
+             console.log(cs2)   //answer []
+
+             let cs3= [] && 1 && "Alice" && undefined
+             console.log(cs3)   //answer undefined
+
+              let cs4= "" || -0 || undefined || {jno:18}
+             console.log(cs4)   //answer {jno:18}
     </script>
 </body>
 </html>
