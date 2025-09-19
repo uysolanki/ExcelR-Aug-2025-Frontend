@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="test()">Welcome</button>
+
+    <button></button>
+
+    <button id="login-button">Login</button>
+
+    <input type="text" id="t1">
+    <script>
+
+        function test()
+        {
+            alert("Welcome to ExcelR")
+            let inputData=parseInt(document.getElementById("t1").value);
+            console.log(inputData)
+        }
+
+        let loginButton=document.getElementById("login-button")
+
+        loginButton.addEventListener('click',test)
+        document.addEventListener('keypress',test1)
+
+        function test1(event)
+        {
+            if(event.key=='a')
+            alert("Welcome to ExcelR")
+        }
+    </script>
+</body>
+</html>
