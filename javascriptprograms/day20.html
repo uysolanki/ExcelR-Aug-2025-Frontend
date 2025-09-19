@@ -36,16 +36,15 @@
 
         let a1={
             'font-size':'55px',
-            'background-color':'red',
+            'background-color':'black',
             'color':'white',
             }
         Object.assign(result.style,a1)
 
 
-       
-
-
-
+        for(let key in a1)
+        result.style.setProperty(key,a1[key])
+        
    </script>
 </body>
 </html>
