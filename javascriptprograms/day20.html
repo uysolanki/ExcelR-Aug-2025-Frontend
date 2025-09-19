@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-heading{
+            font-size: 60px;
+            background-color: #0000ff;
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="answer"></h1>
+    <script>
+        let a=10;
+        let b=20;
+
+        let c=a+b;
+        //console.log(c)
+        let result=document.getElementById("answer")
+        result.innerHTML=c
+
+        let yellow='blue'
+        //result.style.backgroundColor='red'
+        //result.style.color='yellow'
+
+        //result.style.setProperty('font-size','40px')
+
+        result.classList.add('my-heading')
+
+
+   </script>
+</body>
+</html>
