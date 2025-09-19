@@ -26,11 +26,24 @@
 
         let yellow='blue'
         //result.style.backgroundColor='red'
-        //result.style.color='yellow'
+        result.style.color='yellow'
 
-        //result.style.setProperty('font-size','40px')
+        result.style.setProperty('font-size','40px')
 
         result.classList.add('my-heading')
+
+        result.setAttribute("style", "font-size: 40px; background-color: pink;");
+
+        let a1={
+            'font-size':'55px',
+            'background-color':'red',
+            'color':'white',
+            }
+        Object.assign(result.style,a1)
+
+
+       
+
 
 
    </script>
