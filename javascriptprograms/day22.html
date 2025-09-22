@@ -23,6 +23,8 @@
     <p class="subscribe-button">Full Stack Development</p>
     <p class="subscribe-button">Java React</p>
 
+    
+
     <div class="amitabh-container">
             <h1>Angry Young Man</h1>
             <p>Virat</p>
@@ -32,6 +34,11 @@
                     <p>Bumrah</p>
                 </div>
     </div>
+
+    <input type="text"/><br><br>
+    <input type="password"/> <br><br>
+    <input>
+
     <script>
         let projectTitle=document.getElementById("project-title");
         projectTitle.style.backgroundColor='red'
@@ -67,6 +74,21 @@
         let arr3=document.querySelectorAll('.amitabh-container>p')
         Array.from(arr3).forEach(
             (element)=>(element.style.backgroundColor='blue')
+        )
+
+        let arr4= document.querySelectorAll('input')
+        Array.from(arr4).forEach(
+            (element)=>(element.style.backgroundColor='red')
+        )
+
+        let arr5= document.querySelectorAll('input[type]')
+        Array.from(arr5).forEach(
+            (element)=>(element.style.backgroundColor='blue')
+        )
+
+        let arr6= document.querySelectorAll('input[type=password]')
+        Array.from(arr6).forEach(
+            (element)=>(element.style.backgroundColor='pink')
         )
     </script>
 </body>
