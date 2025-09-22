@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <style>
-        .subscribe-button{
+        .fsd{
             background-color: rgb(206, 7, 7);
             border: none;
             padding: 8px;
@@ -18,10 +18,10 @@
 </head>
 <body>
     <h1 id="project-title">Excler Finishing School</h1>
-    <button class="subscribe-button">Subscribe</button>
-    <h1 class="subscribe-button">Welcome to My Channel</h1>
-    <p class="subscribe-button">Full Stack Development</p>
-    <p class="subscribe-button">Java React</p>
+    <button class="fsd">Subscribe</button>
+    <h1 class="fsd">Welcome to My Channel</h1>
+    <p class="fsd">Full Stack Development</p>
+    <p class="fsd">Java React</p>
 
     
 
@@ -43,7 +43,7 @@
         let projectTitle=document.getElementById("project-title");
         projectTitle.style.backgroundColor='red'
 
-        let buttonList=document.getElementsByClassName("subscribe-button")
+        let buttonList=document.getElementsByClassName("fsd")
         console.log(buttonList)
 
         let arr=Array.of(buttonList);
@@ -63,7 +63,7 @@
         
         let a=document.querySelector('#project-title')
         a.style.color='white'
-        let arr1=document.querySelectorAll(".subscribe-button")
+        let arr1=document.querySelectorAll(".fsd")
 
         let arr2=document.querySelectorAll('.amitabh-container p')
         Array.from(arr2).forEach(
