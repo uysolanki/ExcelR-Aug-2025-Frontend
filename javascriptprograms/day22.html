@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .subscribe-button{
+            background-color: rgb(206, 7, 7);
+            border: none;
+            padding: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="project-title">Excler Finishing School</h1>
+    <button class="subscribe-button">Subscribe</button>
+    <h1 class="subscribe-button">Welcome to My Channel</h1>
+    <p class="subscribe-button">Full Stack Development</p>
+    <p class="subscribe-button">Java React</p>
+
+    <div class="amitabh-container">
+            <h1>Angry Young Man</h1>
+            <p>Virat</p>
+            <p>Rohit</p>
+                <div class="abhishek-container">
+                    <p>Siraj</p>
+                    <p>Bumrah</p>
+                </div>
+    </div>
+    <script>
+        let projectTitle=document.getElementById("project-title");
+        projectTitle.style.backgroundColor='red'
+
+        let buttonList=document.getElementsByClassName("subscribe-button")
+        console.log(buttonList)
+
+        let arr=Array.of(buttonList);
+
+        Array.from(buttonList).forEach(
+            (ele)=>(ele.style.setProperty('background-color','green'))
+        )
+
+        Array.from(buttonList).forEach(
+            (ele,index)=>{
+                if(index%2==0)
+                ele.style.setProperty('background-color','green')
+                else
+                ele.style.setProperty('background-color','red')
+            }
+        )
+        
+        let a=document.querySelector('#project-title')
+        a.style.color='white'
+        let arr1=document.querySelectorAll(".subscribe-button")
+
+        let arr2=document.querySelectorAll('.amitabh-container p')
+        Array.from(arr2).forEach(
+            (element)=>(element.style.backgroundColor='yellow')
+        )
+
+
+        let arr3=document.querySelectorAll('.amitabh-container>p')
+        Array.from(arr3).forEach(
+            (element)=>(element.style.backgroundColor='blue')
+        )
+    </script>
+</body>
+</html>
