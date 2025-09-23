@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #eye-image{
+            height: 30px;
+        }
+    </style>
 </head>
 <body>
    <form>
@@ -18,7 +23,7 @@
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="showhidepassword">
-    <label class="form-check-label" for="exampleCheck1" id="pass-label">Show Password</label>
+    <label class="form-check-label" for="exampleCheck1" id="pass-label"><img id="eye-image" src="../images/hide_eye.png"></label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -27,6 +32,8 @@
     let showHidePassword=document.querySelector('#showhidepassword')
     showHidePassword.addEventListener('change',test1)
 
+    let eyeImage=document.querySelector('#eye-image')
+    eyeImage.addEventListener('click',test1)
     function test1()
     {
         let passwordElement=document.querySelector('#pass1')
@@ -34,12 +41,12 @@
         if(showHidePassword.checked)
         {
              passwordElement.type="text"
-             passwordLabel.textContent="Hide"
+             eyeImage.src="../images/eye.png"
         }
         else
         {
             passwordElement.type="password"
-            passwordLabel.textContent="Show"
+            eyeImage.src="../images/hide_eye.png"
         }
     }
 </script>
