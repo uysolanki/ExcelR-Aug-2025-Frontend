@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-
 let products=[
   {
     id: 1,
@@ -252,73 +242,4 @@ let products=[
 ]
 
 
-//Map
-let allTitles=products.map(
-  (product)=>product.title
-)
-
-console.log(allTitles)
-console.log(products.length)
-//traditional / classical for loop
-for(let i=0;i<products.length;i++)
-{
-    console.log(products.at(i).title)
-}
-
-//for of loop (forEach loop)
-let max=0
-let maxProduct
-for(let product of products)
-{
-   if(product.price>max)
-   {
-   maxProduct= product
-   max= product.price
-   }
-}
-
-console.log(maxProduct.title)
-
-
-let cars=["Audi","BMW", "Merc"]
-
-for(let car of cars)
-{
-  console.log("I drive " ,car)
-}
-
-let allImages=products.map(
-  (product)=>(product.image)
-)
-
-console.log(allImages)
-
-
-allImages.forEach(
-  (myImage)=>(console.log(myImage))
-)
-
-//display the length of all product title
-products.map(
-  (prod)=>(prod.title)
-).map(
-  (prod)=>(prod.length)
-).forEach(
-  (prod)=>(console.log(prod))
-)
-
-//display title of products where price > = 500
-let productsGreaterThan500= products.filter(
-  (prod)=>(prod.price>=500)
-).forEach(
-  (prod)=>(console.log(prod.title))
-)
-
-let totalProductPrice=products.reduce(
-  (acc,prod)=>(acc+prod.price),0
-)
-
-console.log(totalProductPrice)
-</script>
-</body>
-</html>
+export default products
