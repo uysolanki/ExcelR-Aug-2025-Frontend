@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissor')">Scissor</button>
+
+
+    <script>
+        let win=0,lose=0,tie=0;
+        function playGame(playerMove)
+        {
+            console.log(`Player Move ${playerMove}`)
+            let computerMove=generateComputerMove()
+            console.log(`Computer Move ${computerMove}`)
+            let result
+          
+            switch(playerMove)
+            {
+                case 'Rock':
+                            switch(computerMove)
+                            {
+                                case 'Rock' :   result='TIE'; break
+                                case 'Paper' :  result='LOSE'; break
+                                case 'Scissor' :result='WIN'; break
+                            }
+                break;
+
+                case 'Paper':
+                            switch(computerMove)
+                            {
+                                case 'Rock' :   result='WIN'; break
+                                case 'Paper' :  result='TIE'; break
+                                case 'Scissor' :result='LOSE'; break
+                            }
+                break;
+
+
+                case 'Scissor':
+                            switch(computerMove)
+                            {
+                                case 'Rock' :   result='LOSE'; break
+                                case 'Paper' :  result='WIN'; break
+                                case 'Scissor' :result='TIE'; break
+                            }
+                break;   
+            }
+
+            console.log(`Result ${result}`)
+
+            switch(result)
+            {
+                case 'WIN' : win++; break;
+                case 'LOSE' : lose++; break;
+                case 'TIE' : tie++; break;
+            }
+
+            console.log(`Scoreboard WIN : ${win} LOSE : ${lose} : TIE ${tie}`)
+        }
+
+
+        function generateComputerMove()
+        {
+            let randomNumber=Math.random();
+           // console.log(randomNumber)
+            if(randomNumber<=1/3)
+            return 'Rock'
+            else if(randomNumber<=2/3)
+            return 'Paper'
+            else
+            return 'Scissor'
+        }
+    </script>
+</body>
+</html>
