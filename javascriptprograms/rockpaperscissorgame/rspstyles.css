@@ -1,0 +1,35 @@
+ body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+        }
+        .move-image{
+            padding: 30px;
+            height: 100px;
+        }
+        .move-button{
+            background-color: gray;
+            border: 3px solid yellow;
+
+            border-radius: 200px;
+            cursor: pointer;
+            margin-right: 20px;
+            flex:1
+        }
+        .button-container{
+            border: 2px solid white;
+            display: flex;
+            width:700px;
+            padding: 20px;
+        }
+        .parent-container{
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+        .reset button{
+            background-color: blueviolet;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }

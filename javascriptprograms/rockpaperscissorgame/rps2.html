@@ -8,7 +8,7 @@
 <body>
     <button onclick="playGame('Rock')">Rock</button>
     <button onclick="playGame('Paper')">Paper</button>
-    <button onclick="playGame('Scissor')">Scissor</button>
+    <button onclick="playGame('Scissors')">Scissors</button>
     <p id="moves"></p>
     <p id="result"></p>
     <p id="scoreboard"></p>
@@ -27,7 +27,7 @@
                             {
                                 case 'Rock' :   result='TIE'; break
                                 case 'Paper' :  result='LOSE'; break
-                                case 'Scissor' :result='WIN'; break
+                                case 'Scissors' :result='WIN'; break
                             }
                 break;
 
@@ -36,17 +36,17 @@
                             {
                                 case 'Rock' :   result='WIN'; break
                                 case 'Paper' :  result='TIE'; break
-                                case 'Scissor' :result='LOSE'; break
+                                case 'Scissors' :result='LOSE'; break
                             }
                 break;
 
 
-                case 'Scissor':
+                case 'Scissors':
                             switch(computerMove)
                             {
                                 case 'Rock' :   result='LOSE'; break
                                 case 'Paper' :  result='WIN'; break
-                                case 'Scissor' :result='TIE'; break
+                                case 'Scissors' :result='TIE'; break
                             }
                 break;   
             }
@@ -78,7 +78,7 @@
             else if(randomNumber<=2/3)
             return 'Paper'
             else
-            return 'Scissor'
+            return 'Scissors'
         }
     </script>
 </body>

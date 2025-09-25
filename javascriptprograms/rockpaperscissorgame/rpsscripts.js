@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button onclick="playGame('Rock')">Rock</button>
-    <button onclick="playGame('Paper')">Paper</button>
-    <button onclick="playGame('Scissors')">Scissors</button>
-    <p id="moves"></p>
-    <p id="result"></p>
-    <p id="scoreboard"></p>
+let win=0,lose=0,tie=0;
+        let score= JSON.parse(localStorage.getItem("rpsscore")) || {win,lose,tie}
+        
+        let resetButton=document.querySelector('#reset-button').addEventListener('click',resetScore)
+        let resultPara,scoreboardPara,movesPara
 
-    <script>
-        let win=0,lose=0,tie=0;
-        let score={win,lose,tie}
+
+        let rockMoveButton=document.querySelector('#rock-move-button').addEventListener('click',()=>playGame('Rock'))
+        let paperMoveButton=document.querySelector('#paper-move-button').addEventListener('click',()=>playGame('Paper'))
+        let scissorsMoveButton=document.querySelector('#scissors-move-button').addEventListener('click',()=>playGame('Scissors'))
         function playGame(playerMove)
         {
             let computerMove=generateComputerMove()
@@ -59,14 +51,18 @@
                 case 'TIE' : score.tie++; break;
             }
 
-            let movesPara=document.querySelector('#moves')
+
+            movesPara=document.querySelector('#moves')
             movesPara.innerHTML=`Player Move :  ${playerMove} | Computer Move : ${computerMove} `
         
-            let resultPara=document.querySelector('#result')
+            resultPara=document.querySelector('#result')
             resultPara.innerHTML=`Result ${result}`
 
-            let scoreboardPara=document.querySelector('#scoreboard')
+            scoreboardPara=document.querySelector('#scoreboard')
             scoreboardPara.innerHTML=`Scoreboard WIN : ${score.win} LOSE : ${score.lose} : TIE ${score.tie}`
+        
+            let scoreString=JSON.stringify(score)
+            localStorage.setItem("rpsscore",scoreString);
         }
 
 
@@ -81,6 +77,23 @@
             else
             return 'Scissors'
         }
-    </script>
-</body>
-</html>
+
+        function resetScore()
+        {
+            score={
+                win:0,
+                lose:0,
+                tie:0
+            }
+
+            localStorage.removeItem('rpsscore')
+            alert('Scoreboard reset')
+
+            movesPara.innerHTML=`Player Move :  | Computer Move :  `
+        
+            resultPara=document.querySelector('#result')
+            resultPara.innerHTML=`Result `
+
+            scoreboardPara=document.querySelector('#scoreboard')
+            scoreboardPara.innerHTML=`Scoreboard WIN : ${score.win} LOSE : ${score.lose} : TIE ${score.tie}`
+        }
