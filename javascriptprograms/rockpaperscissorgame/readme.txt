@@ -6,3 +6,4 @@ rps5 - add images to the button
 rps6 - reset button
 rps7 - moved onclick function call from html to JS
 rps8 - sepearte 3 files .html .js .css
+rps9 - play with keyboard
