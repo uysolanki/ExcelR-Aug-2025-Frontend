@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input-text"> 
+    <button id="add-button">ADD</button>
+    <p id="show-list"></p>
+    <script>
+        let addButton=document.querySelector('#add-button').addEventListener('click', addToList)
+        let showList=document.querySelector('#show-list')
+        let todoListString=""
+        function addToList()
+        {
+            let inputText=document.querySelector('#input-text')
+            let inputData=inputText.value;
+            //console.log(inputData)
+            todoListString= todoListString +inputData +"<br>"
+
+            showList.innerHTML=todoListString
+        }
+    </script>
+</body>
+</html>

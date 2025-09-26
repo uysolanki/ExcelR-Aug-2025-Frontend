@@ -67,7 +67,6 @@
         let resetButton=document.querySelector('#reset-button').addEventListener('click',resetScore)
         let resultPara,scoreboardPara,movesPara
 
-
         let rockMoveButton=document.querySelector('#rock-move-button').addEventListener('click',()=>playGame('Rock'))
         let paperMoveButton=document.querySelector('#paper-move-button').addEventListener('click',()=>playGame('Paper'))
         let scissorsMoveButton=document.querySelector('#scissors-move-button').addEventListener('click',()=>playGame('Scissors'))
@@ -96,7 +95,6 @@
         autoPlayButton.style.backgroundColor="red"
         autoPlayButton.addEventListener('click',autoPlayMode)
        
-
         function playGame(playerMove)
         {
         //     switch(event.key)
@@ -112,10 +110,6 @@
 
         //         default : alert('Invalid Move'); return;
         //     }
-
-        
-        
-
 
             let computerMove=generateComputerMove()
             let result
@@ -209,7 +203,7 @@
         let intervalID
         function autoPlayMode()
         {
-            if(!autoMode)      //false
+            if(!autoMode)                              //false
             {
                autoPlayButton.style.backgroundColor="green"  
                autoMode=true  
