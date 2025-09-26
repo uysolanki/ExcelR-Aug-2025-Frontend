@@ -57,6 +57,7 @@
         </div>
         <div class="reset">
             <button id="reset-button">RESET</button>
+            <button id="autoplay-button">Autoplay</button>
         </div>
     </div>
     <script>
@@ -87,9 +88,14 @@
                 case 's':
                 case 'S':  playGame('Scissors');break;
 
-                default : alert('Invalid Move'); return;
+                //default : alert('Invalid Move'); return;
             }
         });
+
+        let autoPlayButton=document.querySelector('#autoplay-button');
+        autoPlayButton.style.backgroundColor="red"
+        autoPlayButton.addEventListener('click',autoPlayMode)
+       
 
         function playGame(playerMove)
         {
@@ -199,7 +205,26 @@
             scoreboardPara.innerHTML=`Scoreboard WIN : ${score.win} LOSE : ${score.lose} : TIE ${score.tie}`
         }
 
-       
+        let autoMode=false                              //false
+        let intervalID
+        function autoPlayMode()
+        {
+            if(!autoMode)      //false
+            {
+               autoPlayButton.style.backgroundColor="green"  
+               autoMode=true  
+               intervalID=setInterval(()=>{
+                    let computerGeneratedPlayerMove=generateComputerMove()
+                    playGame(computerGeneratedPlayerMove)
+               },2000)
+            }
+            else
+            {
+               autoPlayButton.style.backgroundColor="red"  
+               autoMode=false
+               clearInterval(intervalID)
+            }
+        }
     </script>
 </body>
 </html>
