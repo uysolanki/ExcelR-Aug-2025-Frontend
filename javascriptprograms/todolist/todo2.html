@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input-text"> 
+    <button id="add-button">ADD</button>
+    <p id="show-list"></p>
+    <script>
+        let addButton=document.querySelector('#add-button').addEventListener('click', addToList)
+        let showList=document.querySelector('#show-list')
+        let todoListArray=[]
+        
+        function addToList()
+        {
+            let todoListString=""
+            let inputText=document.querySelector('#input-text') 
+            let inputData=inputText.value;   //mango                [apple,mango]   "apple<br>mango<br>"
+            
+            if(!todoListArray.includes(inputData))
+            {
+            todoListArray.push(inputData)
+            }
+            else
+            {
+                alert ('Item Allready existing')
+                return
+            }
+            console.log( todoListArray)
+            todoListArray.forEach(
+                (todoItem)=>{
+                      todoListString= todoListString +todoItem +"<br>"
+                }
+            )
+           
+           
+            showList.innerHTML=todoListString
+        }
+    </script>
+</body>
+</html>
