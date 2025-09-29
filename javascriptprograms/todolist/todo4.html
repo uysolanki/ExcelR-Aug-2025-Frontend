@@ -7,7 +7,7 @@
     <style>
         .show-list{
             display: grid;
-            grid-template-columns:150px 150px;
+            grid-template-columns:150px 150px 150px ;
             column-gap: 20px;
             align-items: center;
         }
@@ -34,11 +34,26 @@
             let todoListString=""
             todoListArray.forEach(
                 (todoItem)=>{
-                      todoListString= todoListString + `<p> ${todoItem.todoTask} </p> <p> ${todoItem.todoTaskDate}</p>  `
+                      todoListString= todoListString + `<p> ${todoItem.todoTask} </p> <p> ${todoItem.todoTaskDate}</p> <button class='delete-button'> Delete </button> `
                 }
             )
             showList.innerHTML=todoListString
+
+             let deleteButtons=document.querySelectorAll('.delete-button')
+            console.log(deleteButtons)
+
+        deleteButtons.forEach(
+            (singleDeleteButton,index)=>{
+                        singleDeleteButton.addEventListener('click',()=>{
+                            todoListArray.splice(index,1)
+                            console.log(todoListArray)
+                            displayTodoList()
+                        })
+            }
+        )
         }
+
+
         function addToList()
         {
            
@@ -75,6 +90,13 @@
                     return true;
                 }
                 return false;
+        }
+
+        function deleteTodoItem(index)
+        {
+            todoListArray.splice(index,1)
+            console.log(todoListArray)
+           // displayTodoList()
         }
     </script>
 </body>
