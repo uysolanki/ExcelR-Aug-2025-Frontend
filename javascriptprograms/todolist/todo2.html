@@ -12,7 +12,7 @@
     <script>
         let addButton=document.querySelector('#add-button').addEventListener('click', addToList)
         let showList=document.querySelector('#show-list')
-        let todoListArray=[]
+        let todoListArray=['task1','task2']
         
         function addToList()
         {
@@ -23,6 +23,8 @@
             if(!todoListArray.includes(inputData))
             {
             todoListArray.push(inputData)
+            inputText.value=""
+            inputText.focus()
             }
             else
             {
