@@ -15,6 +15,36 @@
         #display-task,#display-date{
             display: inline-block;
         }
+
+        #add-button{
+            background-color: green;
+            font-size: 16px;
+            color:white;
+            border: none;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Arial';
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+
+        .delete-button{
+            background-color: red;
+            font-size: 16px;
+            color:white;
+            border: none;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Arial';
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
@@ -59,15 +89,17 @@
            
             let inputTextElement=document.querySelector('#input-text') 
             let inputDateElement=document.querySelector('#input-date') 
-            let todoTask=inputTextElement.value;   //mango                [apple,mango]   "apple<br>mango<br>"
-            let todoTaskDate=inputDateElement.value; 
+            let todoTask=inputTextElement.value;   //task3               
+            let todoTaskDate=inputDateElement.value; //29-sept-2025
 
             console.log(todoTask)
             console.log(todoTaskDate)
-            let todoObject={todoTask,todoTaskDate}
+            let todoObject={todoTask,todoTaskDate}  //{todoTask:task3 ,todoTaskDate:29-sept-2025}
             
             let booleanResult=checkForDuplicateTask(todoObject)
-            if(!booleanResult)
+            if(todoTask=="" || todoTaskDate=="")
+            alert('Both fields are compulsory')
+            else if(!booleanResult)
             {
             todoListArray.push(todoObject)
             inputTextElement.value=""
@@ -92,12 +124,12 @@
                 return false;
         }
 
-        function deleteTodoItem(index)
-        {
-            todoListArray.splice(index,1)
-            console.log(todoListArray)
-           // displayTodoList()
-        }
+        // function deleteTodoItem(index)
+        // {
+        //     todoListArray.splice(index,1)
+        //     console.log(todoListArray)
+        //    // displayTodoList()
+        // }
     </script>
 </body>
 </html>
