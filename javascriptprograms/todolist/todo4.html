@@ -12,10 +12,6 @@
             align-items: center;
         }
 
-        #display-task,#display-date{
-            display: inline-block;
-        }
-
         #add-button{
             background-color: green;
             font-size: 16px;
@@ -52,9 +48,7 @@
     <input type="date" id="input-date"> 
     <button id="add-button">ADD</button>
     <div class="show-list"></div>
-    <script>
-
-       
+    <script>  
         let addButton=document.querySelector('#add-button').addEventListener('click', addToList)
         let showList=document.querySelector('.show-list')
         let todoListArray=[{todoTask:'task1',todoTaskDate:'2025-09-29'},{todoTask:'task2',todoTaskDate:'2025-09-29'}]
@@ -89,7 +83,7 @@
            
             let inputTextElement=document.querySelector('#input-text') 
             let inputDateElement=document.querySelector('#input-date') 
-            let todoTask=inputTextElement.value;   //task3               
+            let todoTask=inputTextElement.value;     //task3               
             let todoTaskDate=inputDateElement.value; //29-sept-2025
 
             console.log(todoTask)
