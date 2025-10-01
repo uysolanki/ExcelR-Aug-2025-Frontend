@@ -1,0 +1,105 @@
+ *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .channel-picture{
+            display: inline-block;
+        }
+        .video-details{
+             display: inline-block;
+             margin-left: 5px;
+        }
+        .thumbnail-image{
+            width: 100%;
+        }
+
+        .video-info-row{
+            width: 300px;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .channel-image{
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        #video-title{
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        #author{
+            font-size: 8px;
+            margin-bottom: 4px;
+        }
+        #views{
+            font-size: 8px;
+        }
+
+        .video-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 10px;
+            row-gap: 10px;
+            margin-left: 100px; 
+            margin-top: 90px;
+        }
+        .thumbnail-row{
+            position: relative;
+        }
+        .video-time{
+            background-color: black;
+            color:white;
+            position: absolute;
+            bottom:10px;
+            right: 10px;
+        }
+        .sidebar{
+            height: 800px;
+            width : 100px;
+            background-color: white;
+            position: fixed;
+            z-index: 91;
+            top:90px;
+        }
+        .header{
+            height: 90px;
+            background-color: lightpink;
+            position: fixed;
+            z-index: 92;
+            top : 0px;
+            left : 0px;
+            right : 0px
+        }
+        .sidebar-link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-link:hover{
+            background-color: gray;
+        }
+        .sidebar-link img{
+            height: 40px;
+        }
+
+    @media (max-width: 750px) {      			/* if the max width of screen in 750px */
+    .video-grid {					/* if the width of screen between 0px to 750 px */
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 751px) and (max-width: 999px) {  	/* if the width of screen between 750px to 1000 px*/
+    .video-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1000px) {			/* if the width of screen more than 1000 px */
+    .video-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
