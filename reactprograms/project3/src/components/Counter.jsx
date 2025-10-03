@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import Button from './Button';
 
 
 const Counter = () => {
@@ -34,11 +35,18 @@ const Counter = () => {
     }
   return (
     <div>
-        <button onClick={increment}>Increment By 1</button>
+        {/* <button onClick={increment}>Increment By 1</button>
         <button onClick={decrement}>Decrement By 1</button>
         <button onClick={incrementBy2}>Increment By 2</button>
-        <button onClick={decrementBy2}>Decrement By 2</button>
+        <button onClick={decrementBy2}>Decrement By 2</button> */}
+
+        <Button text="Increment By 1" handleClick={increment} bgcolor='red'/>
+        <Button text="Decrement By 1" handleClick={decrement} bgcolor='yellow'/>
+        <Button text="Increment By 2" handleClick={incrementBy2 } bgcolor='blue'/>
+        <Button text="Decrement By 2" handleClick={decrementBy2} bgcolor='green'/>
         <span>{count}</span>
+
+        
     </div>
   )
 }
