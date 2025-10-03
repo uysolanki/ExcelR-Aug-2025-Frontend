@@ -1,0 +1,16 @@
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #d7c23b;
+    padding: 5px;
+}
+
+ul li{
+    /* background-color: white; */
+}
+
+ul li:hover{
+    background-color: rgb(202, 199, 199);
+    cursor: pointer;
+}
