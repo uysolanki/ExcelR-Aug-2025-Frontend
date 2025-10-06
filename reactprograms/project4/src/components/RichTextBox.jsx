@@ -4,6 +4,8 @@ import { useState } from 'react'
 const RichTextBox = () => {
   let [data,setData]=useState('')
   let [previewData,setPreviewData]=useState('')
+
+  console.log(Boolean(''))
   function handleOnChange(event)
   {
     setData(event.target.value)
@@ -28,7 +30,7 @@ const RichTextBox = () => {
 
         <div>
         <h3>Preview</h3>
-        <p>{previewData}</p>
+        <p>{previewData ? previewData: 'Nothing to preview' }</p>
         </div>
     </>
 
