@@ -1,0 +1,17 @@
+.parent-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .parent-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .parent-container {
+    grid-template-columns: 1fr;
+  }
+}

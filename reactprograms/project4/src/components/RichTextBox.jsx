@@ -8,31 +8,31 @@ const RichTextBox = () => {
   let [previewData,setPreviewData]=useState('')
 
   console.log(Boolean(''))
-  // function handleOnChange(event)
-  // {
-  //   setData(event.target.value)
-  //   setPreviewData(event.target.value)
-  // }
-  // function convertToUpperCase()
-  // {
-  //   setPreviewData(previewData.toUpperCase())
-  // }
+  function handleOnChange(event)
+  {
+    setData(event.target.value)
+    setPreviewData(event.target.value)
+  }
+  function convertToUpperCase()
+  {
+    setPreviewData(previewData.toUpperCase())
+  }
 
-  // function convertToLowerCase()
-  // {
-  //   setPreviewData(previewData.toLowerCase())
-  // }
+  function convertToLowerCase()
+  {
+    setPreviewData(previewData.toLowerCase())
+  }
 
-  // function reset()
-  // {
-  //   setData('')
-  //   setPreviewData('')
-  // }
+  function reset()
+  {
+    setData('')
+    setPreviewData('')
+  }
   return (
     <>
       <div className='parent-container'>
         <div>
-        {/* <textarea rows='12' cols='30' value={data} onChange={handleOnChange} placeholder="Enter your text here..."></textarea> */}
+        <textarea rows='12' cols='30' value={data} onChange={handleOnChange} placeholder="Enter your text here..."></textarea> 
          <textarea rows='12' cols='30' value={data} onChange={
          (event)=>
          {
