@@ -65,16 +65,18 @@ const AllProducts3 = () => {
   return (
     <>
     <Navbar1 handleClick={filterProductsByCategory}/>
-   
+  <div className="shop-main">
+   <div>
     <NavList1 handleClick={filterProductsByCategory}/>
     {/* <input type="text" onChange={searchProductsByTitle}/> */}
     <SearchBar handlesearchProductsByTitle={searchProductsByTitle}/>
-   
+   </div>
     <div className='parent-container'>
     {displayProducts.map(
         (product)=>(<Product key={product.id} prod={product}/> )
     )}
     </div>
+    </div> 
     </>
   )
 }

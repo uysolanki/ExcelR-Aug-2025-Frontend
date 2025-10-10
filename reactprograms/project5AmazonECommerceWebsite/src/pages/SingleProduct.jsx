@@ -5,19 +5,19 @@ import Product from '../components/Product'
 import axios from 'axios'
 const SingleProduct = () => {
   const {apple:id}=useParams()
-  const[pid,setPid]=useState(id)
+  //const[pid,setPid]=useState(id)
   const[product,setProduct]=useState({})
   useEffect(
     ()=>{
         loadData()
-    },[pid]
+    },[id]
   )
 
   async function loadData()
   {
     try
     {
-    const apiproducts=await axios.get(`http://localhost:8087/products/${pid}`)
+    const apiproducts=await axios.get(`http://localhost:8087/products/${id}`)
     console.log(apiproducts)
     setProduct(apiproducts.data)
     }

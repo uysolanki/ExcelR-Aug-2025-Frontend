@@ -3,6 +3,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 10px;
     column-gap: 20px;
+    flex :1;
+    margin-left: 20px;
 }
 .product-image{
   height: 300px;
@@ -17,4 +19,14 @@
   .parent-container {
     grid-template-columns: 1fr;
   }
+}
+
+.shop-main
+{
+  display: flex;
+}
+
+.search-filter
+{
+  width: 200px;
 }
