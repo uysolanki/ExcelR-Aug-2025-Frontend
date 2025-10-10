@@ -4,17 +4,20 @@ import LandingPage from './pages/LandingPage'
 import RichTextBox from './pages/RichTextBox'
 import AllProducts3 from './pages/AllProducts3'
 import MenuBar from './components/MenuBar'
+import MenuBar1 from './components/MenuBar1'
+import SingleProduct from './pages/SingleProduct'
 const App = () => {
   return (
     <>
      <Router>
-      <MenuBar/>
+      <MenuBar1/>
         <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/rich" element={<RichTextBox />} />
             <Route path="/shop" element={<AllProducts3 />} />
             <Route path="/login" element={<LandingPage />} />
             <Route path="/signIn" element={<LandingPage />} />
+            <Route path="/single/:id" element={<SingleProduct />} />
         </Routes>
      </Router>
     </>
