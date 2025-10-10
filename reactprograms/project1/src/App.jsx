@@ -3,7 +3,7 @@ import './App.css'
 const App = () => {
   return (
     <div>
-                <div class="parent-container">
+  <div class="parent-container">
     <div class="card">
       <img src="/man1.jpeg" alt="Product 1"/>
       <button className="amozon-button">Add to Cart</button>

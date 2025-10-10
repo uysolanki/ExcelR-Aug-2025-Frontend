@@ -1,0 +1,10 @@
+.menubar{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: yellow;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+}

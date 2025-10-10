@@ -1,0 +1,14 @@
+.newfsd{
+            background-color: blue;
+            font-size: 24px;
+            color:white;
+            border: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Arial';
+            font-weight: bolder;
+            letter-spacing: 2px;
+}

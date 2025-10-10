@@ -47,11 +47,11 @@ const Counter = () => {
         <button onClick={incrementBy2}>Increment By 2</button>
         <button onClick={decrementBy2}>Decrement By 2</button> */}
 
-        {/* <Button1 text="Increment By 1" handleClick={increment} bgcolor='red'/>
-        <Button1 text="Decrement By 1" handleClick={decrement} bgcolor='yellow'/>
+        <Button1 text="Increment By 11" handleClick={increment} bgcolor='red'/>
+        {/* <Button1 text="Decrement By 1" handleClick={decrement} bgcolor='yellow'/>
         <Button1 text="Increment By 2" handleClick={incrementBy2 } bgcolor='blue'/>
-        <Button1 text="Decrement By 2" handleClick={decrementBy2} bgcolor='green'/> */}
-        <Button1 text="Test" handleClick={toggleFlag} bgcolor={flag}/>
+        <Button1 text="Decrement By 2" handleClick={decrementBy2} bgcolor='green'/>  */}
+        {/* <Button1 text="Test" handleClick={toggleFlag} bgcolor={flag}/> */}
         <h1>{count}</h1>    
     </div>
   )

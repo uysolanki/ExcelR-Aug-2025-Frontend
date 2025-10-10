@@ -1,6 +1,6 @@
 import React from 'react'
 import products from '../data/products.js'
-const Navbar2 = () => {
+function Navbar2() {
 
     let categories=products.map(
         (product)=>(product.category)

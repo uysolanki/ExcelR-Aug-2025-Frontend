@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Navbar from './Navbar'
-import NavList from './NavList'
-import SearchBar from './SearchBar'
-import Product from './Product'
-import Navbar1 from './Navbar1'
-import NavList1 from './NavList1'
+import Navbar1 from '../components/Navbar1'
+import SearchBar from '../components/SearchBar'
+import Product from '../components/Product'
+import NavList1 from '../components/NavList1'
+import './AllProducts.css'
 const AllProducts3 = () => {
 
     const[displayProducts,setdisplayProducts]=useState([])

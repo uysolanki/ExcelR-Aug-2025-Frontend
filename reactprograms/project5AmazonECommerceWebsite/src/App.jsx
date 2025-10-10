@@ -1,14 +1,23 @@
 import React from 'react'
-import AllProducts from './components/AllProducts'
-import AllProducts1 from './components/AllProducts1'
-import AllProducts2 from './components/AllProducts2'
-import AllProducts3 from './components/AllProducts3'
-
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import LandingPage from './pages/LandingPage'
+import RichTextBox from './pages/RichTextBox'
+import AllProducts3 from './pages/AllProducts3'
+import MenuBar from './components/MenuBar'
 const App = () => {
   return (
-    <div>
-      <AllProducts3/>
-    </div>
+    <>
+     <Router>
+      <MenuBar/>
+        <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/rich" element={<RichTextBox />} />
+            <Route path="/shop" element={<AllProducts3 />} />
+            <Route path="/login" element={<LandingPage />} />
+            <Route path="/signIn" element={<LandingPage />} />
+        </Routes>
+     </Router>
+    </>
   )
 }
 

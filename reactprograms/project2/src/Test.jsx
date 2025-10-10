@@ -1,19 +1,13 @@
 import React from 'react'
 
 const Test = () => {
-  const cities=["Delhi","Jaipur","Pune","Mumbai"]
   return (
     <div>
-       <ul>
-    {
-    cities.map((city)=>{
-    console.log(city)
-    return(<li>{city}</li>)
-	})
-    } 
-	</ul>
-
-        
+      <ul>
+        <li>Delhi</li>
+        <li>Jaipur</li>
+        <li>Pune</li>
+	    </ul>  
     </div>
   )
 }

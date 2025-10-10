@@ -4,13 +4,11 @@ const Test1 = () => {
  const cities=["Apple","Jaipur","Pune","Mumbai"]
   return (
     <div>
-    <ul>
-    {
-    cities.map((city)=>(<li>{city}</li>))
-    } 
-	</ul>
-
-        
+        <ul>
+        {
+        cities.map((city)=>(<li>{city}</li>))
+        } 
+	    </ul>
     </div>
   )
 }
