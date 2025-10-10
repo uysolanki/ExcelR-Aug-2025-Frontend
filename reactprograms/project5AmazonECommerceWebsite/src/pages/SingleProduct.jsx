@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import Product from '../components/Product'
 import axios from 'axios'
 const SingleProduct = () => {
-  const {id}=useParams("id")
+  const {apple:id}=useParams()
   const[pid,setPid]=useState(id)
   const[product,setProduct]=useState({})
   useEffect(
