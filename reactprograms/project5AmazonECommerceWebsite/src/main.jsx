@@ -5,11 +5,12 @@ import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import TestContextProvider from './contexts/TestContextProvider.jsx';
 import DemoContextProvider from './contexts/DemoContextProvider.jsx';
+import UserContextProvider from './contexts/UserContextProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
-    <DemoContextProvider>
+    <UserContextProvider>
     <App />
-    </DemoContextProvider>
+    </UserContextProvider>
  // </StrictMode>,
 )

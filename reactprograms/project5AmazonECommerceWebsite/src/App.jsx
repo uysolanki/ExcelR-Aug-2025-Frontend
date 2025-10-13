@@ -6,6 +6,7 @@ import AllProducts3 from './pages/AllProducts3'
 import MenuBar from './components/MenuBar'
 import MenuBar1 from './components/MenuBar1'
 import SingleProduct from './pages/SingleProduct'
+import Login from './pages/Login'
 const App = () => {
   return (
     <>
@@ -15,7 +16,7 @@ const App = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/rich" element={<RichTextBox />} />
             <Route path="/shop" element={<AllProducts3 />} />
-            <Route path="/login" element={<LandingPage />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/signIn" element={<LandingPage />} />
             <Route path="/single/:apple" element={<SingleProduct />} />
         </Routes>
