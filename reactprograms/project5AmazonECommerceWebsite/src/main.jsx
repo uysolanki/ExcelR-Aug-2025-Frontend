@@ -7,12 +7,15 @@ import TestContextProvider from './contexts/TestContextProvider.jsx';
 import DemoContextProvider from './contexts/DemoContextProvider.jsx';
 import UserContextProvider from './contexts/UserContextProvider.jsx';
 import HelloContextProvider from './contexts/HelloContextProvider.jsx';
+import ProductContextProvider from './contexts/ProductContextProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
     <UserContextProvider>
        <HelloContextProvider>
-          <App />
+          <ProductContextProvider>
+            <App />
+          </ProductContextProvider>
       </HelloContextProvider>
     </UserContextProvider>
  // </StrictMode>,

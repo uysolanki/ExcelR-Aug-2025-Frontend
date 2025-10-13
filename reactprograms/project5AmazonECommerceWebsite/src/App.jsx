@@ -7,6 +7,8 @@ import MenuBar from './components/MenuBar'
 import MenuBar1 from './components/MenuBar1'
 import SingleProduct from './pages/SingleProduct'
 import Login from './pages/Login'
+import AllProducts4 from './pages/AllProducts4'
+import SingleProduct1 from './pages/SingleProduct1'
 const App = () => {
   return (
     <>
@@ -15,10 +17,10 @@ const App = () => {
         <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/rich" element={<RichTextBox />} />
-            <Route path="/shop" element={<AllProducts3 />} />
+            <Route path="/shop" element={<AllProducts4 />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signIn" element={<LandingPage />} />
-            <Route path="/single/:apple" element={<SingleProduct />} />
+            <Route path="/single/:apple" element={<SingleProduct1 />} />
         </Routes>
      </Router>
     </>
