@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import UserContext from '../contexts/UserContext'
+import { UserContext } from '../contexts/UserContextProvider'
 import Homepage from './Homepage'
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
 
     const {setUser} =useContext(UserContext)
 
-    function handleClick(e)
+    function handleSubmit(e)
     {
         e.preventDefault()
         setUser({username:username,password:password})
@@ -26,7 +26,7 @@ const Login = () => {
         onChange={(e)=>setPassword(e.target.value)}
         ></input>
 
-        <input type="submit" value="LOGIN" onClick={handleClick}></input>
+        <input type="submit" value="LOGIN" onClick={handleSubmit}></input>
     </form>
     <Homepage/>
     </>

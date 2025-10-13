@@ -6,11 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TestContextProvider from './contexts/TestContextProvider.jsx';
 import DemoContextProvider from './contexts/DemoContextProvider.jsx';
 import UserContextProvider from './contexts/UserContextProvider.jsx';
+import HelloContextProvider from './contexts/HelloContextProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
     <UserContextProvider>
-    <App />
+       <HelloContextProvider>
+          <App />
+      </HelloContextProvider>
     </UserContextProvider>
  // </StrictMode>,
 )
