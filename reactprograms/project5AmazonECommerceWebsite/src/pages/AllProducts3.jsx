@@ -65,8 +65,9 @@ const AllProducts3 = () => {
   return (
     <>
     <Navbar1 handleClick={filterProductsByCategory}/>
+    
   <div className="shop-main">
-   <div>
+   <div class="search-filter">
     <NavList1 handleClick={filterProductsByCategory}/>
     {/* <input type="text" onChange={searchProductsByTitle}/> */}
     <SearchBar handlesearchProductsByTitle={searchProductsByTitle}/>

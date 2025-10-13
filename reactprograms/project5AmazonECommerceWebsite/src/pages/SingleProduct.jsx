@@ -3,6 +3,7 @@ import './SingleProduct.css'
 import { Link, useParams } from 'react-router-dom'
 import Product from '../components/Product'
 import axios from 'axios'
+import BreadCrumbs from '../components/BreadCrumbs'
 const SingleProduct = () => {
   const {apple:id}=useParams()
   //const[pid,setPid]=useState(id)
@@ -25,15 +26,29 @@ const SingleProduct = () => {
   }
   return ( 
     <>
-   {!product ?  "<h3>Loading Product... </h3>" :
-   <div className="card" style={{'width': '18rem'}}>
+   
+   {!product ?  
+   
+   "<h3>Loading Product... </h3>" :
+   <div>
+   <BreadCrumbs prod={product} />
+   <div class="single-prod">
+        <div className="card" style={{'width': '18rem'}}>
                 <img className="card-img-top product-image" src={product.image} alt="Card image cap"/> 
                             <div className="card-body">
                                     <h5 className="card-title">{product.title}</h5>
-                                    <p>{product.description ? product.description.slice(0, 30) + '...' : ''}</p>
+                                    <p> {product.description}</p>
                                     <Link to="/shop"> <a className="btn btn-primary">BACK</a> </Link>
                             </div>
-    </div> }
+        </div> 
+        <div className="prod-images">
+                 <img  src={product.image} alt="Card image cap"/> 
+                 <img  src={product.image} alt="Card image cap"/> 
+                 <img  src={product.image} alt="Card image cap"/> 
+        </div>
+    </div>
+    </div>
+    }
     </>
   )
 }

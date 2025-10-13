@@ -1,0 +1,11 @@
+.single-prod{
+    display: flex;
+}
+
+.prod-images
+{
+    display: flex;
+   justify-content: space-around;
+    background-color: rgb(91, 89, 89);
+    flex :1;
+}
