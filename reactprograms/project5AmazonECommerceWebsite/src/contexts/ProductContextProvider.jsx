@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import axios from 'axios'
 
 export const ProductContext=createContext()
+
 const ProductContextProvider = ({children}) => {
 
     const [products,setProducts]=useState()
@@ -26,7 +27,7 @@ const ProductContextProvider = ({children}) => {
         }
     }
 
-    let contextValue={products,setProducts}
+   // let contextValue={products,setProducts}
 
   return (
     <ProductContext.Provider value={{products,setProducts}}>

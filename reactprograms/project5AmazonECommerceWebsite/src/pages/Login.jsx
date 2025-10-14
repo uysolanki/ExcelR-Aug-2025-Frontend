@@ -8,10 +8,17 @@ const Login = () => {
 
     const {setUser} =useContext(UserContext)
 
-    function handleSubmit(e)
+    function handleLogin(e)
     {
         e.preventDefault()
         setUser({username:username,password:password})
+        localStorage.setItem("myuser", JSON.stringify({username:username,password:password}))
+    }
+
+    function handleLogout(e)
+    {
+      localStorage.removeItem("myuser")
+      alert ("logout successfull")
     }
   return (
     <>
@@ -26,7 +33,8 @@ const Login = () => {
         onChange={(e)=>setPassword(e.target.value)}
         ></input>
 
-        <input type="submit" value="LOGIN" onClick={handleSubmit}></input>
+        <input type="button" value="LOGIN" onClick={handleLogin}></input>
+        <input type="submit" value="LOGOUT" onClick={handleLogout}></input>
     </form>
     <Homepage/>
     </>
