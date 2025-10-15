@@ -9,6 +9,8 @@ import SingleProduct from './pages/SingleProduct'
 import Login from './pages/Login'
 import AllProducts4 from './pages/AllProducts4'
 import SingleProduct1 from './pages/SingleProduct1'
+import RegisterUser from './pages/RegisterUser'
+import AddProduct from './pages/AddProduct'
 const App = () => {
   return (
     <>
@@ -16,10 +18,10 @@ const App = () => {
       <MenuBar1/>
         <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/rich" element={<RichTextBox />} />
+            <Route path="/add" element={<AddProduct />} />
             <Route path="/shop" element={<AllProducts4 />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/signIn" element={<LandingPage />} />
+            <Route path="/signin" element={<RegisterUser />} />
             <Route path="/single/:apple" element={<SingleProduct1 />} />
         </Routes>
      </Router>

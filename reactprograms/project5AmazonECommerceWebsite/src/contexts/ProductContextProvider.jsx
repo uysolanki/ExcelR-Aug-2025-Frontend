@@ -10,7 +10,7 @@ const ProductContextProvider = ({children}) => {
     useEffect(
         ()=>{
             loadProducts()
-        },[]
+        },[products]
     )
 
     async function loadProducts()
