@@ -49,7 +49,7 @@ const AllProducts4 = () => {
     <Navbar1 handleClick={filterProductsByCategory}/>
     
   <div className="shop-main">
-   <div class="search-filter">
+   <div className="search-filter">
     <NavList1 handleClick={filterProductsByCategory}/>
     {/* <input type="text" onChange={searchProductsByTitle}/> */}
     <SearchBar handlesearchProductsByTitle={searchProductsByTitle}/>

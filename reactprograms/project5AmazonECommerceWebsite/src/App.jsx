@@ -11,6 +11,7 @@ import AllProducts4 from './pages/AllProducts4'
 import SingleProduct1 from './pages/SingleProduct1'
 import RegisterUser from './pages/RegisterUser'
 import AddProduct from './pages/AddProduct'
+import AddProduct1 from './pages/AddProduct1'
 const App = () => {
   return (
     <>
@@ -18,7 +19,7 @@ const App = () => {
       <MenuBar1/>
         <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/add" element={<AddProduct />} />
+            <Route path="/add" element={<AddProduct1 />} />
             <Route path="/shop" element={<AllProducts4 />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<RegisterUser />} />
