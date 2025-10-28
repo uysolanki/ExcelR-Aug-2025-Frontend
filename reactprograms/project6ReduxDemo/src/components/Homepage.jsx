@@ -4,7 +4,7 @@ import { login, logout } from "../redux/UserSlice";
 
 const Homepage = () => {
 
-const user = useSelector((state) => state.user );   
+const user1 = useSelector((state) => state.user );   
 const dispatch = useDispatch(); 
 
 const [username,setUsername]=useState("")
@@ -16,8 +16,8 @@ function handleSubmit()
 
   return (
     <>
-       {user? 
-       <div><h1> Welcome  {user}   </h1> 
+       {user1? 
+       <div><h1> Welcome  {user1}   </h1> 
        
        <input type="button" value="LOGOUT" onClick={()=>dispatch(logout())}></input>
        </div>
