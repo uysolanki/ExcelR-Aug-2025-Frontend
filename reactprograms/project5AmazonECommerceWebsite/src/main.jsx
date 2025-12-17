@@ -14,9 +14,9 @@ createRoot(document.getElementById('root')).render(
     <UserContextProvider>
        <HelloContextProvider>
           <ProductContextProvider>
-            <Provider store={store}>
+            {/* <Provider store={store}> */}
               <App />
-            </Provider>
+            {/* </Provider> */}
           </ProductContextProvider>
       </HelloContextProvider>
     </UserContextProvider>

@@ -15,7 +15,7 @@ const Navbar1 = ({handleClick}) => {
     {
         try
         {
-        const apiproducts=await axios.get("http://localhost:8087/products/getAllProducts")
+        const apiproducts=await axios.get("http://localhost:8083/get-all-products")
         setProducts(apiproducts.data)
         }
         catch(error)
